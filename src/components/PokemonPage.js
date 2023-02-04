@@ -6,11 +6,13 @@ import { Container } from "semantic-ui-react";
 
 function PokemonPage() {
 const [pokemonData, setPokemonData] = useState([]);
+//useState returns an array  in this case. starting w empty array///
 
   useEffect(() => {
     fetch ("http://localhost:3001/pokemon")
     .then(response => response.json())
-    .then(data => console.log(data))
+    // .then(data => console.log(data))
+    .then (data => setPokemonData(data)) //pass data into setPokemonData function//
   }, []);
 
   return (
