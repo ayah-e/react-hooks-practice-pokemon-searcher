@@ -1,10 +1,11 @@
 import React from "react";
 
 
-function Search() {
+function Search({search, setSearch}) {
   function handleSearch(e) {
     const value = e.target.value
-    console.log(value)
+    setSearch(value)
+    // console.log(value)
   }
   return (
     <div className="ui search">

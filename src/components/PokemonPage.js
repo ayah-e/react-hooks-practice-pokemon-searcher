@@ -19,17 +19,20 @@ const [search, setSearch] = useState(""); //starts w empty string
   const pokemonFilteredArray = pokemonData.filter((pokemon) => {
     return pokemon.name.toLowerCase().includes(search.toLowerCase()) //includes means anything being typed in will filter the pokemon with the names
   });
-  console.log(pokemonFilteredArray)
+ 
+  function handlePost(newPokemonObj){
+    setPokemonData([...pokemonData, newPokemonObj]);
+  }
 
   return (
     <Container>
       <h1>Pokemon Searcher</h1>
       <br />
-      <PokemonForm />
+      <PokemonForm handlePost = {handlePost}/>
       <br />
-      <Search />
+      <Search search = {setSearch} setSearch = {setSearch}/>
       <br />
-      <PokemonCollection pokemonData = {pokemonData} />
+      <PokemonCollection pokemonData = {pokemonFilteredArray} />
     </Container>
   );
 }
