@@ -23,7 +23,7 @@ const [pokemonData, setPokemonData] = useState([]);
       <br />
       <Search />
       <br />
-      <PokemonCollection />
+      <PokemonCollection pokemonData = {pokemonData} />
     </Container>
   );
 }
