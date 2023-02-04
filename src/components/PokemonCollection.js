@@ -16,8 +16,9 @@ function PokemonCollection({ pokemonData }) {
 
   return (
     <Card.Group itemsPerRow={6}>
-      <h1>Hello From Pokemon Collection</h1>
-      {pokemonCards}
+
+      <h1></h1>
+     {pokemonCards}
     </Card.Group>
   );
 }

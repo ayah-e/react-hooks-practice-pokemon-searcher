@@ -5,7 +5,7 @@ function PokemonCard({name, sprite, hp}) {
 
   const [isToggle, setIsToggle] = useState(true);
   function handleToggle() { 
-    setIsToggle(!isToggle);
+    setIsToggle(!isToggle); //toggle the state
   };
 
   return (
